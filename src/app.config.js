@@ -1,11 +1,15 @@
 export default {
   pages: [
-    'pages/index/index'
+    'pages/index/index',
+    'pages/hotel/list/index',
+    'pages/hotel/detail/index',
+    'pages/order/list/index',
+    'pages/user/index/index'
   ],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
+    navigationBarTitleText: 'EasyStay',
     navigationBarTextStyle: 'black'
   },
   tabBar: {
@@ -21,19 +25,19 @@ export default {
         text: "首页"
       },
       {
-        pagePath: "pages/hotel/list",
+        pagePath: "pages/hotel/list/index",
         iconPath: "./assets/tabbar/hotel.svg",
         selectedIconPath: "./assets/tabbar/hotel-active.svg",
         text: "酒店"
       },
       {
-        pagePath: "pages/order/list",
+        pagePath: "pages/order/list/index",
         iconPath: "./assets/tabbar/order.svg",
         selectedIconPath: "./assets/tabbar/order-active.svg",
         text: "订单"
       },
       {
-        pagePath: "pages/user/index",
+        pagePath: "pages/user/index/index",
         iconPath: "./assets/tabbar/user.svg",
         selectedIconPath: "./assets/tabbar/user-active.svg",
         text: "我的"
