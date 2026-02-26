@@ -1,6 +1,7 @@
 export default {
   pages: [
     'pages/index/index',
+    'pages/test/index',
     'pages/hotel/list/index',
     'pages/hotel/detail/index',
     'pages/order/list/index',

@@ -11,6 +11,8 @@ const config = {
   outputRoot: 'dist',
   plugins: [],
   defineConstants: {
+    // 添加环境变量定义
+    API_BASE_URL: JSON.stringify(process.env.API_BASE_URL || 'http://localhost:3000/api')
   },
   copy: {
     patterns: [

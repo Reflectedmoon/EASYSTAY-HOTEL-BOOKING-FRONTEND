@@ -3,7 +3,8 @@ import { showLoading, hideLoading, showToast } from '@tarojs/taro'
 
 // 创建 axios 实例
 const request = axios.create({
-  baseURL: process.env.API_BASE_URL || 'http://localhost:3000/api',
+  // 使用 Taro defineConstants 定义的环境变量，添加 fallback
+  baseURL: typeof API_BASE_URL !== 'undefined' ? API_BASE_URL : 'http://localhost:3000/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'

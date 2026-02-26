@@ -1,15 +1,182 @@
 .hotel-list-page {
   min-height: 100vh;
   background-color: #f5f5f5;
-  
-  .header {
+
+  // 顶部筛选条件区域
+  .filter-header {
     padding: 20px;
     background-color: white;
     border-bottom: 1px solid #eee;
+    position: relative;
+
+    .filter-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      .filter-item {
+        flex: 1;
+        min-width: 120px;
+        display: flex;
+        flex-direction: column;
+
+        .filter-label {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 8px;
+        }
+
+        .filter-value {
+          font-size: 16px;
+          color: #333;
+          font-weight: bold;
+          padding: 8px 12px;
+          background-color: #f9f9f9;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+
+        .filter-value:hover {
+          background-color: #e9f5ff;
+        }
+      }
+    }
   }
-  
-  .content {
+
+  // 详细筛选区域
+  .filter-panel {
     padding: 20px;
     background-color: white;
+    margin-top: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    .filter-section {
+      margin-bottom: 20px;
+
+      .section-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 12px;
+      }
+
+      .filter-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        .filter-item {
+          padding: 8px 16px;
+          background-color: #f5f5f5;
+          border-radius: 20px;
+          font-size: 14px;
+          color: #666;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &.active {
+            background-color: #1890ff;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  // 酒店列表
+  .hotel-list {
+    padding: 20px;
+    background-color: white;
+    margin-top: 16px;
+
+    .hotel-list-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+
+      .sort-controls {
+        display: flex;
+        gap: 16px;
+
+        .sort-item {
+          font-size: 14px;
+          color: #666;
+          cursor: pointer;
+          padding: 4px 12px;
+          border-radius: 4px;
+          transition: all 0.3s;
+
+          &.active {
+            background-color: #1890ff;
+            color: white;
+          }
+        }
+      }
+    }
+
+    // 酒店列表项
+    .hotel-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    // 加载更多
+    .load-more {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 14px;
+    }
+  }
+
+  // 空状态
+  .empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+    
+    .empty-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    
+    .empty-text {
+      font-size: 16px;
+    }
+  }
+}
+
+// 响应式设计
+@media screen and (max-width: 750px) {
+  .hotel-list-page {
+    .filter-options {
+      flex-direction: column;
+      
+      .filter-item {
+        min-width: 100%;
+      }
+    }
+    
+    .hotel-list-header {
+      flex-direction: column;
+      gap: 12px;
+      
+      .sort-controls {
+        width: 100%;
+        justify-content: space-around;
+      }
+    }
   }
 }

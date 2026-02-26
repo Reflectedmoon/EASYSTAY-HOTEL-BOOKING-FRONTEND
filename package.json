@@ -42,7 +42,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@ant-design/cssinjs": "^2.1.0",
     "@babel/runtime": "^7.21.0",
+    "@reduxjs/toolkit": "^1.9.5",
     "@tarojs/components": "3.6.16",
     "@tarojs/helper": "3.6.16",
     "@tarojs/plugin-framework-react": "3.6.16",
@@ -58,17 +60,18 @@
     "@tarojs/runtime": "3.6.16",
     "@tarojs/shared": "3.6.16",
     "@tarojs/taro": "3.6.16",
+    "antd": "^6.3.1",
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^8.1.2",
-    "@reduxjs/toolkit": "^1.9.5",
-    "axios": "^1.4.0"
+    "react-redux": "^8.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@tarojs/cli": "3.6.16",
     "@tarojs/webpack5-runner": "3.6.16",
+    "@types/jest": "^29.5.1",
     "@types/react": "^18.2.0",
     "@types/webpack-env": "^1.18.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -91,7 +94,6 @@
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
     "stylelint": "^15.6.0",
-    "@types/jest": "^29.5.1",
     "typescript": "^5.0.4",
     "webpack": "^5.78.0"
   },

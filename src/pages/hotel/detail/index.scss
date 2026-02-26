@@ -1,15 +1,338 @@
 .hotel-detail-page {
   min-height: 100vh;
   background-color: #f5f5f5;
-  
-  .header {
-    padding: 20px;
+
+  // 顶部导航栏
+  .detail-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 16px;
     background-color: white;
     border-bottom: 1px solid #eee;
+    
+    .back-button {
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    
+    .hotel-title {
+      flex: 1;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: #333;
+    }
+    
+    .empty-space {
+      width: 40px;
+    }
   }
-  
-  .content {
+
+  // 大图 Banner
+  .banner-section {
+    position: relative;
+    
+    .banner-swiper {
+      height: 280px;
+      
+      .swiper-item {
+        height: 100%;
+        
+        .banner-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    
+    .swipe-indicator {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+  }
+
+  // 酒店基础信息
+  .hotel-info-section {
     padding: 20px;
     background-color: white;
+    margin-top: 16px;
+    
+    .hotel-basic-info {
+      .hotel-name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        
+        .name {
+          flex: 1;
+          font-size: 20px;
+          font-weight: bold;
+          color: #333;
+        }
+        
+        .rating {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: #666;
+          
+          .star {
+            color: #ffc107;
+            margin-right: 4px;
+          }
+          
+          .reviews {
+            color: #999;
+            margin-left: 4px;
+          }
+        }
+      }
+      
+      .hotel-address {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: #666;
+        
+        .location-icon {
+          margin-right: 8px;
+          font-size: 16px;
+        }
+      }
+      
+      .hotel-facilities {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        
+        .facilities-label {
+          font-size: 14px;
+          color: #666;
+          margin-right: 8px;
+        }
+        
+        .facilities-list {
+          font-size: 14px;
+          color: #333;
+        }
+      }
+    }
+  }
+
+  // 日历选择区域
+  .date-section {
+    padding: 20px;
+    background-color: white;
+    margin-top: 16px;
+    
+    .date-picker {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      
+      .date-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
+        Text {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 8px;
+        }
+        
+        .date-value {
+          font-size: 16px;
+          font-weight: bold;
+          color: #333;
+          padding: 8px 12px;
+          background-color: #f9f9f9;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+    
+    .nights-info {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+
+  // 房型列表
+  .room-list-section {
+    padding: 20px;
+    background-color: white;
+    margin-top: 16px;
+    
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      
+      .sort-tip {
+        font-size: 12px;
+        color: #999;
+      }
+    }
+    
+    .room-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  // 房型卡片
+  .room-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    
+    .room-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid #eee;
+      
+      .room-name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .room-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1890ff;
+      }
+    }
+    
+    .room-info {
+      padding: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      
+      .room-detail {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+    
+    .room-facilities {
+      padding: 0 16px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      
+      .facility-tag {
+        padding: 4px 8px;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        font-size: 12px;
+        color: #666;
+      }
+    }
+    
+    .room-actions {
+      padding: 16px;
+      border-top: 1px solid #eee;
+      
+      .book-btn {
+        width: 100%;
+        height: 44px;
+        background: linear-gradient(135deg, #1890ff, #40a9ff);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // 底部固定按钮
+  .fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 16px 20px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.05);
+    
+    .price-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      
+      .total-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1890ff;
+      }
+    }
+    
+    .book-button {
+      width: 100%;
+      height: 52px;
+      background: linear-gradient(135deg, #1890ff, #40a9ff);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
+
+// 响应式设计
+@media screen and (max-width: 750px) {
+  .hotel-detail-page {
+    .detail-header {
+      padding: 16px 16px 12px;
+    }
+    
+    .banner-section {
+      .banner-swiper {
+        height: 240px;
+      }
+    }
+    
+    .fixed-bottom {
+      padding: 12px 16px;
+      
+      .price-summary {
+        .total-price {
+          font-size: 16px;
+        }
+      }
+    }
   }
 }
