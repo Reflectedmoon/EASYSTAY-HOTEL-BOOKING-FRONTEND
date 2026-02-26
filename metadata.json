@@ -1,0 +1,5 @@
+{
+  "name": "易宿酒店预订平台",
+  "description": "智慧出行酒店预订平台，包含用户端预订流程和商户/管理员端信息管理系统。",
+  "requestFramePermissions": []
+}
